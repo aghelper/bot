@@ -1,0 +1,57 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/agh-bot/src",
+  "projects": {
+    "orm": {
+      "type": "library",
+      "root": "libs/orm",
+      "entryFile": "index",
+      "sourceRoot": "libs/orm/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/orm/tsconfig.lib.json"
+      }
+    },
+    "agh-bot": {
+      "type": "application",
+      "root": "apps/agh-bot",
+      "entryFile": "main",
+      "sourceRoot": "apps/agh-bot/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/agh-bot/tsconfig.app.json"
+      }
+    },
+    "seed": {
+      "type": "application",
+      "root": "apps/seed",
+      "entryFile": "main",
+      "sourceRoot": "apps/seed/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/seed/tsconfig.app.json"
+      }
+    },
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared/tsconfig.lib.json"
+      }
+    },
+    "member-history": {
+      "type": "application",
+      "root": "apps/member-history",
+      "entryFile": "main",
+      "sourceRoot": "apps/member-history/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/member-history/tsconfig.app.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/agh-bot/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/agh-bot"
+}
